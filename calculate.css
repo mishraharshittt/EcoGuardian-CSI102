@@ -1,0 +1,309 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: auto;  
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.container {
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.calculator {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.calculator input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.calculator button {
+    background: #00ff9d;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calculator button:hover {
+    background: #00ff9d;
+}
+
+.result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #00ff84;
+}
+    
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1f2937;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .eco-icon {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00d1b2;
+}
+
+.cta-button {
+    padding: 0.5rem 1rem;
+    background: #00ff9d;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ff9d;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+}
+.lifecycle-stages {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.stage-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stage-card:hover {
+    transform: scale(1.05);
+}
+
+.stage-card h3 {
+    margin-bottom: 1rem;
+    color: #00ff9d;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background: #00ff9d;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007f68;
+    transform: scale(1.1);
+}
+
+.results {
+    margin-top: 3rem;
+    text-align: center;
+    background-color: #2d3748; 
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    color: #e2e8f0; 
+    width: 75%;
+}
+
+.results h2 {
+    font-size: 2rem; 
+    margin-bottom: 1.5rem;
+    color: #00ff9d;
+}
+
+.results p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.chart-container {
+    margin-top: 1.5rem;
+    background: #1a202c; 
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    height: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.eco-tips {
+    margin-top: 2rem;
+    background: #2c3e50;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    color: #e0f7fa; 
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.eco-tips:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.eco-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.eco-tips li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.eco-tips li:before {
+    content: "✓"; 
+    color: #00ff9d; 
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+footer {
+    position: baseline;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #6fcf97;
+    font-size: 0.9rem;
+  }
